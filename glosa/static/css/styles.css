@@ -1,0 +1,31 @@
+body {
+    background-color: #f8fafc;
+}
+h2 {
+    color: #495057;
+}
+.card {
+    background: #fff8e1;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.btn-outline-primary {
+    background-color: #e3f2fd;
+    border-color: #90caf9;
+}
+
+/* --- Sticky footer --- */
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main.container {
+    flex: 1;
+}
+footer {
+    margin-top: auto;
+}

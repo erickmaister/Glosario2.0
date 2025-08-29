@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ term.termino }}{% endblock %}
+{% block content %}
+    <h1>{{ term.termino }}</h1>
+    <p><strong>{{ _('Código') }}:</strong> {{ term.codigo }}</p>
+    <p><strong>{{ _('Categoría') }}:</strong> {{ term.categoria }}</p>
+    <p><strong>{{ _('Definición') }}:</strong> {{ term | attr('term_' + lang) }}</p>
+    <p><strong>{{ _('Ejemplo 1') }}:</strong> {{ term | attr('ejemplo1_' + lang) or _('Ninguno') }}</p>
+    <p><strong>{{ _('Ejemplo 2') }}:</strong> {{ term | attr('ejemplo2_' + lang) or _('Ninguno') }}</p>
+    <p><strong>{{ _('Fuente') }}:</strong> {{ term.fuente or _('Ninguna') }}</p>
+    <p><strong>{{ _('Observación') }}:</strong> {{ term.observacion or _('Ninguna') }}</p>
+    <p><a href="{{ url_for('index') }}">{{ _('Volver') }}</a></p>
+{% endblock %}
